@@ -1,9 +1,9 @@
 %% Access data
 % Load variables from MAT file into workspace
-[arrivalTimes, departureTimes] = read_time_data("timestampsMilan.mat");
+[arrivalTimes, departureTimes] = read_time_data("datasets/timestampsMilan.mat");
 
 %% Process data
-% Compute elapsed durations between entryTimestamps and exitTimestamps
+% Compute elapsed durations between arrivalTimes and departureTimes
 durations = arrivalTimes - departureTimes;
 averageDuration = mean(durations, "omitnan");
 
